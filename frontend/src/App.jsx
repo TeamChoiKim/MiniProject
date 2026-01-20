@@ -1,15 +1,25 @@
-import { useState } from 'react'
+
 import reactLogo from '@/assets/react.svg'
 import viteLogo from '/vite.svg'
-import '@/App.css'
+import './css/App.css'
+import Main from '@/pages/Main.jsx'
+import NotFound from '@/pages/NotFound.jsx'
+import GameRoom from '@/pages/GameRoom.jsx'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter, Routes, Route } from 'react-router';
+
+
 
 const App = () => {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Main />} />
+        <Route path='/game' element={<GameRoom />} />
+        <Route path='*' element={<NotFound />} />
+      </Routes>
+
+    </BrowserRouter>
   )
 }
 

@@ -1,0 +1,5 @@
+#Main .room_list {
+    padding-top: 50px !important;
+    height: calc(100vh - 150px);
+    overflow-y: hidden;
+}
