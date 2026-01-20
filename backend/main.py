@@ -4,4 +4,4 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-  return {"project": "1team"}
+  return {"project": "2team"}
